@@ -8,7 +8,6 @@ using namespace std;
 int main (void){
     unsigned int n;
     stack<int> stack;  
-    string push="push";
     cin>>n;
 
     for(int i=0;i<n;i++){
