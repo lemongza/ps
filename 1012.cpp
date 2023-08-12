@@ -24,7 +24,7 @@ bool dfs(int x, int y)
         int nx = x + dx[i];
         int ny = y + dy[i];
 
-        if (nx >= 0 && ny >= 0 && ny < M && ny < N && arr[ny][nx] == 1)
+        if (nx >= 0 && ny >= 0 && nx < M && ny < N && arr[ny][nx] == 1)
         {
             dfs(nx, ny);
         }
@@ -34,11 +34,15 @@ bool dfs(int x, int y)
 
 int main()
 {
+    
     cin >> T;
     
 
     for (int t = 0; t < T; t++)
     {
+        fill_n(arr[0],51*51,0);
+        fill_n(check[0],51*51,0);
+
         int cnt = 0;
         cin >> M >> N >> K;
 
@@ -60,6 +64,6 @@ int main()
                 }
             }
         }
-        cout << cnt ;
+        cout << cnt <<"\n";
     }
 }
